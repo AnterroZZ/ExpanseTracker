@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanse Tracker</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="newScript.js" type="text/javascript" defer ></script>
+
+</head>
+<body>
+    <div id="expanseAdd">
+        <input type="number" placeholder="Amount" name="expanseAmount" id="expanseAmount">
+        <input type="date" name="expanseDate" id="expanseDate">
+        <select name="expanseCategory" id="expanseCategory">
+            <option value="food">Food</option>
+            <option value="travel">Travel</option>
+            <option value="rent">Rent</option>
+            <option value="others">Others</option>
+        </select>
+        <button onclick="changeDate(this)" id="todayButton">Today</button>
+        <button onclick="changeDate(this)" id="yesterdayButton">Yesterday</button>
+        <textarea name="expanseDescription" id="expanseDescription" cols="30" rows="10"></textarea>
+        <button onclick="addExpanse(this)" id="expanseAddButton">Add</button>
+    </div>
+
+    <div id="expanseHistory">
+        <h1 class="title">History</h1>
+        <table id="historyTable">
+            <tr>
+                <th>Amount</th>
+                <th>Category</th>
+                <th>Date</th>
+                <th>Description</th>
+                <th>X</th>
+            </tr>
+
+            <!-- <tr>
+                <td>250.69$</td>
+                <td>Food</td>
+                <td>25-02-2021</td>
+                <td>Dogs Food</td>
+                <td class="delete">Delete</td>
+            </tr> -->
+        </table>
+    </div>
+
+    <div id="expanseSummary">
+        <h1 class="title">Summary</h1>
+        <div id="summaries">
+            <p>Money spend: <i id="summaryAll"></i> $</p>
+            <p>Money spend this month: <i id="summaryMonth"></i> $</p>
+            <p>Money spend on food: <i id="summaryFood"></i> $</p>
+            <p>Money spend on rent: <i id="summaryRent"></i> $</p>
+            <p>Money spend on travel: <i id="summaryTravel"></i> $</p>
+            <p>Money spend on other things: <i id="summaryOthers"></i> $</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
