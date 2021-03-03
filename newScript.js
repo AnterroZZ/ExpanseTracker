@@ -76,9 +76,7 @@ function refreshExpanses() {
             newRow.appendChild(newDescription);
             newRow.appendChild(newDelete);
             table.insertBefore(newRow,table.children[1]);
-
             calculateSummaries(currentExpanse);
-
         }
     }
 }
